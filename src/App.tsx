@@ -2,6 +2,7 @@ import { BrowserRouter, Route, Routes } from 'react-router-dom'
 import { Header } from './Components/Header'
 import { Products } from './Components/Products'
 import { Cart } from './Components/Cart'
+import { Footer } from './Components/Footer'
 
 function App() {
   return (
@@ -19,6 +20,7 @@ function App() {
           />
         </Routes>
       </main>
+      <Footer />
     </BrowserRouter>
   )
 }

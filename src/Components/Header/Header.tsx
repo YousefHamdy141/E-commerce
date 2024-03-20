@@ -2,7 +2,6 @@ import { Link } from 'react-router-dom'
 import logo from '../../assets/logo.png'
 import { CartWidget } from '../CartWidget'
 import './header.scss'
-// import '../CartWidget/CartWidget.scss'
 
 export const Header = () => {
     const productsCount: number = length
@@ -34,6 +33,6 @@ export const Header = () => {
             <div className='header-text'>
                 <p className='text'>All the products you need</p>
             </div>
-        </header >
+        </header>
     )
 }
