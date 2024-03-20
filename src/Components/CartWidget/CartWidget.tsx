@@ -1,6 +1,5 @@
 import { FunctionComponent } from 'react'
 import { useNavigate } from 'react-router-dom'
-
 import shoppingCart from '../../assets/shopping-cart.svg'
 import './CartWidget.scss'
 

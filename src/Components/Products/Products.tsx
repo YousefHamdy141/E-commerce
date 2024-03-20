@@ -71,7 +71,7 @@ export const Products = () => {
                         <img src={product.thumbnail} alt={product.title} />
                         <h3>{product.title}</h3>
                         <p>Price: <CurrencyFormatter amount={product.price} /></p>
-                        <button disabled={isInCart(product.id)} onClick={() => addToCart(product)}>Add to Cart</button>
+                        <button disabled={isInCart(product.id)} onClick={() => addToCart(product)}>Send to Cart</button>
                     </div>
                 ))}
             </div>

@@ -1,6 +1,7 @@
 .productPage {
   padding: 1rem;
-  margin-top: 8rem;
+  margin-top: 4rem;
+  color: black;
 
   .container {
     display: flex;
@@ -20,11 +21,13 @@
       }
 
       img {
-        height: 6rem;
+        height: 8rem;
+        border-radius: 20px 5px;
       }
 
       button {
-        background-color: #fbd815;
+        color: #FAFAFA;
+        background-color: #E41469;
         width: 13rem;
         padding: .5rem;
         font-size: 1.1em;
@@ -34,12 +37,12 @@
         border-width: 1px;
 
         &:hover:not([disabled]) {
-          background-color: #eecf1d;
+          background-color: crimson;
           cursor: pointer;
         }
 
         &:disabled {
-          opacity: .5;
+          color: black;
           background-color: lightgray;
         }
       }
@@ -58,4 +61,3 @@
     }
   }
 }
-
