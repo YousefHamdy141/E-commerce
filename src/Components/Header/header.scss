@@ -88,3 +88,18 @@
       font-family: Poppins, sans-serif !important;
     }
   }
+
+  .button {
+    margin-top: 40px;
+    border-radius: 50px;
+    width: 50%;
+    height: 64px;
+    font-size: 24px;
+    align-items: center;
+    color: #FAFAFA;
+    background-color: #E41469;
+
+    &:hover {
+      cursor: pointer;
+    }
+  }

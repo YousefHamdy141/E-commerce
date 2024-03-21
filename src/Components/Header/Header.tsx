@@ -6,6 +6,13 @@ import './header.scss'
 export const Header = () => {
     const productsCount: number = length
 
+    const scrollToFooter = () => {
+        window.scrollTo({
+            top: document.documentElement.scrollHeight,
+            behavior: "smooth",
+        });
+    };
+
     return (
         <header className="header-container">
             <nav>
@@ -32,7 +39,11 @@ export const Header = () => {
 
             <div className='header-text'>
                 <p className='text'>All the products you need</p>
+                <a onClick={scrollToFooter}>
+                    <button className='button'>Let's Talk</button>
+                </a>
             </div>
+
         </header>
     )
 }
