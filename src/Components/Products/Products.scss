@@ -3,6 +3,11 @@
   margin-top: 4rem;
   color: black;
 
+  h1 {
+    margin-bottom: 80px;
+    border-bottom: 3px solid brown;
+  }
+
   .container {
     display: flex;
     flex-wrap: wrap;
@@ -23,6 +28,10 @@
       img {
         height: 8rem;
         border-radius: 20px 5px;
+
+        &:hover {
+          cursor: pointer;
+        }
       }
 
       button {
@@ -46,6 +55,18 @@
           background-color: lightgray;
         }
       }
+    }
+
+
+
+    .contain {
+      position: absolute;
+      background-color: #333;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      z-index: 1;
+      transform: translateY(100px);
     }
 
     @media (max-width: 767px) {

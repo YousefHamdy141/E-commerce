@@ -3,8 +3,9 @@ import { Header } from './Components/Header'
 import { Products } from './Components/Products'
 import { Cart } from './Components/Cart'
 import { Footer } from './Components/Footer'
+import { Details } from './Components/Pages/Details'
 
-function App() {
+const App = () => {
   return (
     <BrowserRouter>
       <Header />
@@ -17,6 +18,10 @@ function App() {
           <Route
             path="/cart"
             element={<Cart />}
+          />
+          <Route
+            path="/details"
+            element={<Details />}
           />
         </Routes>
       </main>

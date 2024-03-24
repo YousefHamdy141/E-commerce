@@ -26,7 +26,7 @@ export const Header = () => {
                 </div>
                 <ul>
                     <Link to="/">
-                        <li><a> Products </a></li>
+                        <li className='nn'><a> Products </a></li>
                     </Link>
                     <Link to="/src/Components/AboutPage/About.tsx">
                         <li><a> About us </a></li>
