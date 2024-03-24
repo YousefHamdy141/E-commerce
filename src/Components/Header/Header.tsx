@@ -2,9 +2,15 @@ import { Link } from 'react-router-dom'
 import logo from '../../assets/logo.png'
 import { CartWidget } from '../CartWidget'
 import './header.scss'
+import useLocalStorageState from 'use-local-storage-state'
+import { CartProps } from '../Products/Products'
 
 export const Header = () => {
-    const productsCount: number = length
+    const [cart] = useLocalStorageState<CartProps>('cart', {})
+    console.log(cart);
+
+    const getProducts = () => Object.values(cart || {})
+
 
     const scrollToFooter = () => {
         window.scrollTo({
@@ -33,7 +39,7 @@ export const Header = () => {
                     </Link>
                 </ul>
                 <div>
-                    <CartWidget productsCount={productsCount} />
+                    <CartWidget productsCount={getProducts()?.length} />
                 </div>
             </nav>
 

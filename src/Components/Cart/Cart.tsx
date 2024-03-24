@@ -1,4 +1,4 @@
-import { FunctionComponent, useEffect } from 'react'
+import { FunctionComponent } from 'react'
 import useLocalStorageState from 'use-local-storage-state'
 import { Quantifier } from '../Quantifier'
 import { CartProps } from '../Products/Products.tsx'
@@ -9,10 +9,6 @@ import './Cart.scss'
 
 export const Cart: FunctionComponent = () => {
     const [cart, setCart] = useLocalStorageState<CartProps>('cart', {})
-
-    useEffect(() => {
-        window.scrollTo(0, 0)
-    })
 
     const handleRemoveProduct = (productId: number): void => {
         setCart((prevCart) => {
@@ -38,7 +34,6 @@ export const Cart: FunctionComponent = () => {
 
 
     const getProducts = () => Object.values(cart || {})
-
     const totalPrice = getProducts().reduce((accumulator, product) => accumulator + (product.price * product.quantity), 0)
 
     return (

@@ -2207,6 +2207,11 @@
   "resolved" "https://registry.npmjs.org/lru-cache/-/lru-cache-7.18.3.tgz"
   "version" "7.18.3"
 
+"lucide-react@^0.363.0":
+  "integrity" "sha512-AlsfPCsXQyQx7wwsIgzcKOL9LwC498LIMAo+c0Es5PkHJa33xwmYAkkSoKoJWWWSYQEStqu58/jT4tL2gi32uQ=="
+  "resolved" "https://registry.npmjs.org/lucide-react/-/lucide-react-0.363.0.tgz"
+  "version" "0.363.0"
+
 "lz-string@^1.5.0":
   "integrity" "sha512-h5bgJWpxJNswbU7qCrV0tIKQCaS3blPDrqKWx+QxzuzL1zGUzij9XCWLrSLsJPu5t+eWA/ycetzYAO5IOMcWAQ=="
   "resolved" "https://registry.npmjs.org/lz-string/-/lz-string-1.5.0.tgz"
@@ -2855,7 +2860,7 @@
   dependencies:
     "@remix-run/router" "1.15.3"
 
-"react@^18.0.0", "react@^18.2.0", "react@>=16.8", "react@>=18":
+"react@^16.5.1 || ^17.0.0 || ^18.0.0", "react@^18.0.0", "react@^18.2.0", "react@>=16.8", "react@>=18":
   "integrity" "sha512-/3IjMdb2L9QbBdWiW5e3P2/npwMBaU9mHCSCUzNln0ZCYbcfTsGbTJrU/kGemdH2IWmB2ioZ+zkxtmq6g09fGQ=="
   "resolved" "https://registry.npmjs.org/react/-/react-18.2.0.tgz"
   "version" "18.2.0"

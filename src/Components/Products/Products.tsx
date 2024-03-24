@@ -1,4 +1,4 @@
-import { useNavigate } from 'react-router-dom'
+import { createSearchParams, useNavigate } from 'react-router-dom'
 import { useEffect, useState } from 'react'
 import useLocalStorageState from 'use-local-storage-state'
 import { CurrencyFormatter } from '../CurrencyFormatter'
@@ -14,6 +14,8 @@ export type Product = {
     thumbnail: string
     image: string
     quantity: number
+    description?: string
+
 }
 
 export interface CartProps {
@@ -26,9 +28,16 @@ export const Products = () => {
     const [cart, setCart] = useLocalStorageState<CartProps>('cart', {})
 
     const navigate = useNavigate()
-    const navigateToCart = () => {
-        navigate('/details')
+    const navigateTodetails = (id: number) => {
+        navigate({
+            pathname: "details",
+            search: createSearchParams({
+                productId: id.toString()
+            }).toString()
+        })
     }
+
+
     useEffect(() => {
         fetchData(API_URL)
     }, [])
@@ -51,7 +60,6 @@ export const Products = () => {
 
     const addToCart = (product: Product): void => {
         product.quantity = 1
-
         setCart((prevCart) => ({
             ...prevCart,
             [product.id]: product,
@@ -59,7 +67,6 @@ export const Products = () => {
     }
 
     const isInCart = (productId: number): boolean => Object.keys(cart || {}).includes(productId.toString())
-
     if (isLoading) {
         return <Loader />
     }
@@ -71,7 +78,7 @@ export const Products = () => {
             <div className="container">
                 {products.map(product => (
                     <div className="product" key={product.id}>
-                        <img src={product.thumbnail} alt={product.title} onClick={navigateToCart} />
+                        <img src={product.thumbnail} alt={product.title} onClick={() => navigateTodetails(product.id)} />
                         <h3>{product.title}</h3>
                         <p>Price: <CurrencyFormatter amount={product.price} /></p>
                         <button disabled={isInCart(product.id)} onClick={() => addToCart(product)}>Send to Cart</button>
